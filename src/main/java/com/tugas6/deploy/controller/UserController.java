@@ -17,7 +17,14 @@ public class UserController {
         return "login";
     }
 
-
+    @PostMapping("/login")
+    public String loginProcess(@RequestParam String username, @RequestParam String password) {
+        if (username.equals("fannandya") && password.equals("20240140033")) {
+            return "redirect:/home";
+        } else {
+            return "redirect:/?error";
+        }
+    }
 
 
 
