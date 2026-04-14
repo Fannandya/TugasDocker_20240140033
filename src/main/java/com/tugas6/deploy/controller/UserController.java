@@ -42,4 +42,11 @@ public class UserController {
         return "form";
     }
 
+    // simpan data ke list
+    @PostMapping("/save")
+    public String saveUser(@ModelAttribute User user) {
+        mahasiswaList.add(user);
+        return "redirect:/home";
+    }
+
 }
