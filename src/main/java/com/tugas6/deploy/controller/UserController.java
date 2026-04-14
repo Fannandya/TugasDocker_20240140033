@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.ArrayList;
 import java.util.List;
 
-@controller
+@Controller
 public class UserController {
     private static List<User> mahasiswaList = new ArrayList<>();
 
@@ -47,6 +47,12 @@ public class UserController {
     public String saveUser(@ModelAttribute User user) {
         mahasiswaList.add(user);
         return "redirect:/home";
+    }
+
+    // membuat logout
+    @GetMapping("/logout")
+    public String logout() {
+        return "redirect:/";
     }
 
 }
