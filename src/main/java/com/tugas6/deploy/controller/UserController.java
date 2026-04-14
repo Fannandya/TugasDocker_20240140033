@@ -12,11 +12,13 @@ import java.util.List;
 public class UserController {
     private static List<User> mahasiswaList = new ArrayList<>();
 
+    // halaman login
     @GetMapping("/")
     public String loginPage() {
         return "login";
     }
 
+    // validasi login
     @PostMapping("/login")
     public String loginProcess(@RequestParam String username, @RequestParam String password) {
         if (username.equals("fannandya") && password.equals("20240140033")) {
@@ -26,6 +28,18 @@ public class UserController {
         }
     }
 
+    // halaman home
+    @GetMapping("/home")
+    public String homePage(Model model) {
+        model.addAttribute("listMhs", mahasiswaList);
+        return "home";
+    }
 
+    // halaman form input
+    @GetMapping("/form")
+    public String formPage(Model model) {
+        model.addAttribute("user", new User());
+        return "form";
+    }
 
 }
