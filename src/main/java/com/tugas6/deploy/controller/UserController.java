@@ -21,7 +21,7 @@ public class UserController {
     // validasi login
     @PostMapping("/login")
     public String loginProcess(@RequestParam String username, @RequestParam String password) {
-        if (username.equals("fannandya") && password.equals("20240140033")) {
+        if (username.equals("admin") && password.equals("20240140033")) {
             return "redirect:/home";
         } else {
             return "redirect:/?error";
