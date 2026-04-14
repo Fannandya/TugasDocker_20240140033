@@ -8,31 +8,31 @@
 <body>
 <nav class="navbar navbar-dark bg-dark mb-4">
     <div class="container">
-        <span class="navbar-brand">MY Website 20240140033 [cite: 75, 106]</span>
-        <a th:href="@{/logout}" class="btn btn-outline-light btn-sm">Logout [cite: 79]</a>
+        <span class="navbar-brand">MY Website 20240140033</span>
+        <a th:href="@{/logout}" class="btn btn-outline-light btn-sm">Logout</a>
     </div>
 </nav>
 
 <div class="container">
-    <div class="alert alert-info">Selamat datang di aplikasi! [cite: 76]</div>
+    <div class="alert alert-info">Selamat datang di aplikasi!</div>
 
     <div class="d-flex justify-content-between align-items-center mb-3">
-        <h4>Data Mahasiswa [cite: 78]</h4>
-        <a th:href="@{/form}" class="btn btn-success">Input Data Mahasiswa [cite: 77]</a>
+        <h4>Data Mahasiswa</h4>
+        <a th:href="@{/form}" class="btn btn-success">Input Data Mahasiswa</a>
     </div>
 
     <table class="table table-bordered table-striped">
         <thead class="table-dark">
         <tr>
-            <th>No [cite: 80]</th>
-            <th>Nama [cite: 81]</th>
-            <th>NIM [cite: 82]</th>
-            <th>Jenis Kelamin [cite: 83]</th>
+            <th>No</th>
+            <th>Nama</th>
+            <th>NIM</th>
+            <th>Jenis Kelamin</th>
         </tr>
         </thead>
         <tbody>
         <tr th:if="${listMhs.empty}">
-            <td colspan="4" class="text-center">Belum ada data [cite: 84]</td>
+            <td colspan="4" class="text-center">Belum ada data</td>
         </tr>
         <tr th:each="mhs, iter : ${listMhs}">
             <td th:text="${iter.count}">1</td>

@@ -9,32 +9,32 @@
 <div class="container mt-5">
     <div class="card border-0 shadow-sm">
         <div class="card-header bg-primary text-white">
-            <h4 class="mb-0">Form Input Mahasiswa [cite: 85]</h4>
+            <h4 class="mb-0">Form Input Mahasiswa</h4>
         </div>
         <div class="card-body">
             <form th:action="@{/save}" th:object="${user}" method="post">
                 <div class="mb-3">
-                    <label class="form-label">Nama [cite: 86]</label>
+                    <label class="form-label">Nama</label>
                     <input type="text" th:field="*{nama}" class="form-control" required>
                 </div>
                 <div class="mb-3">
-                    <label class="form-label">NIM [cite: 87]</label>
+                    <label class="form-label">NIM</label>
                     <input type="text" th:field="*{nim}" class="form-control" required>
                 </div>
                 <div class="mb-3">
-                    <label class="form-label d-block">Jenis Kelamin [cite: 88]</label>
+                    <label class="form-label d-block">Jenis Kelamin</label>
                     <div class="form-check form-check-inline">
                         <input class="form-check-input" type="radio" th:field="*{jenisKelamin}" value="Laki-laki" id="laki">
-                        <label class="form-check-label" for="laki">Laki-laki [cite: 89]</label>
+                        <label class="form-check-label" for="laki">Laki-laki</label>
                     </div>
                     <div class="form-check form-check-inline">
                         <input class="form-check-input" type="radio" th:field="*{jenisKelamin}" value="Perempuan" id="perempuan">
-                        <label class="form-check-label" for="perempuan">Perempuan [cite: 90]</label>
+                        <label class="form-check-label" for="perempuan">Perempuan</label>
                     </div>
                 </div>
                 <hr>
                 <button type="submit" class="btn btn-primary">Simpan Data</button>
-                <a th:href="@{/home}" class="btn btn-link">Kembali ke Home [cite: 91]</a>
+                <a th:href="@{/home}" class="btn btn-link">Kembali ke Home</a>
             </form>
         </div>
     </div>
